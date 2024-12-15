@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Basic"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Basic ruleset for checking fundamental coding standards such as naming conventions,
+        code complexity, and best practices.
+    </description>
+
+    <!-- Rule to avoid long methods -->
+    <rule ref="category/java/design.xml/AvoidLongMethods"/>
+
+    <!-- Rule to ensure classes have a single responsibility (SRP) -->
+    <rule ref="category/java/design.xml/BrainMethod"/>
+
+    <!-- Rule to avoid empty catch blocks -->
+    <rule ref="category/java/errorprone.xml/EmptyCatchBlock"/>
+
+    <!-- Rule to check method parameter count -->
+    <rule ref="category/java/design.xml/TooManyMethods"/>
+
+    <!-- Rule to avoid using deprecated methods -->
+    <rule ref="category/java/errorprone.xml/AvoidUsingDeprecatedMethods"/>
+
+    <!-- Rule to check that public fields should be avoided -->
+    <rule ref="category/java/codestyle.xml/AvoidPublicFields"/>
+
+    <!-- Rule to avoid hardcoding string literals in the code -->
+    <rule ref="category/java/codestyle.xml/UseStringBufferForStringAppends"/>
+
+    <!-- Rule to avoid unnecessary object creation in loops -->
+    <rule ref="category/java/performance.xml/AvoidInstantiatingObjectsInLoops"/>
+
+    <!-- Rule to ensure that variables are declared at the beginning of a block -->
+    <rule ref="category/java/codestyle.xml/FieldDeclarationsShouldBeAtStartOfClass"/>
+
+    <!-- Rule to avoid using System.out.println -->
+    <rule ref="category/java/errorprone.xml/SystemPrintln"/>
+
+    <!-- Rule to ensure methods and variables are properly named according to naming conventions -->
+    <rule ref="category/java/naming.xml/MethodNamingConventions"/>
+
+</ruleset>

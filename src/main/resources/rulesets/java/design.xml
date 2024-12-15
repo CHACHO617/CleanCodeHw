@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Design"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>
+        Design ruleset for checking code style, naming conventions, and general code quality
+        to ensure that the code is clean, consistent, and maintainable.
+    </description>
+
+    <!-- Rule to check method names follow camelCase -->
+    <rule ref="category/java/naming.xml/MethodNamingConventions"/>
+
+    <!-- Rule to ensure variables follow proper naming conventions (camelCase) -->
+    <rule ref="category/java/naming.xml/VariableNamingConventions"/>
+
+    <!-- Rule to avoid method names that start with an underscore, which is not conventional in Java -->
+    <rule ref="category/java/codestyle.xml/AvoidUnderscoreInMethodName"/>
+
+    <!-- Rule to ensure that class names follow the PascalCase convention -->
+    <rule ref="category/java/naming.xml/ClassNamingConventions"/>
+
+    <!-- Rule to check for excessive use of short variable names -->
+    <rule ref="category/java/codestyle.xml/AvoidShortVariableNames"/>
+
+    <!-- Rule to enforce consistent indentation for better readability -->
+    <rule ref="category/java/codestyle.xml/Indentation"/>
+
+    <!-- Rule to ensure line length is within a reasonable limit (typically 80-120 characters) -->
+    <rule ref="category/java/codestyle.xml/LineLength"/>
+
+    <!-- Rule to check for unnecessary semicolons -->
+    <rule ref="category/java/codestyle.xml/UnnecessarySemicolon"/>
+
+    <!-- Rule to ensure braces are used properly for control structures -->
+    <rule ref="category/java/codestyle.xml/Braces"/>
+
+    <!-- Rule to ensure that methods do not exceed a reasonable length -->
+    <rule ref="category/java/design.xml/AvoidLongMethods"/>
+
+    <!-- Rule to ensure that classes do not exceed a reasonable length -->
+    <rule ref="category/java/design.xml/AvoidLongClasses"/>
+
+    <!-- Rule to enforce that methods should not have too many parameters -->
+    <rule ref="category/java/design.xml/TooManyParameters"/>
+
+    <!-- Rule to check for nested blocks that are too deep -->
+    <rule ref="category/java/codestyle.xml/AvoidDeeplyNestedIfStmts"/>
+
+    <!-- Rule to ensure fields are not declared as public -->
+    <rule ref="category/java/codestyle.xml/AvoidPublicFields"/>
+
+    <!-- Rule to ensure proper use of final variables (constants) -->
+    <rule ref="category/java/codestyle.xml/FinalFieldShouldBeStatic"/>
+    
+
+</ruleset>

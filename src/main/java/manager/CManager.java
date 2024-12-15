@@ -13,32 +13,32 @@ public class CManager {
     // Adds a customer to the list
     public void aC(String n) {
         cList.add(n);
-        logger.info("Added customer: " + n); // Replaced System.out with logger
+        logger.info(String.format("Added customer: %s", n)); // Using String.format for formatting
     }
 
     // Adds an order to the list
     public void aO(String o) {
         oList.add(o);
-        logger.info("Order added: " + o); // Replaced System.out with logger
+        logger.info(String.format("Order added: %s", o)); // Using String.format for formatting
     }
 
     // Processes all orders for a specific customer
     public void pO(String c) {
-        logger.info("Processing orders for: " + c); // Replaced System.out with logger
+        logger.info(String.format("Processing orders for: %s", c)); // Using String.format for formatting
         for (int i = 0; i < oList.size(); i++) {
-            logger.info("Processing order: " + oList.get(i)); // Replaced System.out with logger
+            logger.info(String.format("Processing order: %s", oList.get(i))); // Using String.format for formatting
         }
     }
 
     // Generates a summary report for customers and orders
     public void gR() {
-        logger.info("Customer Report"); // Replaced System.out with logger
+        logger.info("Customer Report");
         for (int i = 0; i < cList.size(); i++) {
-            logger.info("Customer: " + cList.get(i)); // Replaced System.out with logger
+            logger.info(String.format("Customer: %s", cList.get(i))); // Using String.format for formatting
         }
-        logger.info("Order Report"); // Replaced System.out with logger
+        logger.info("Order Report");
         for (int i = 0; i < oList.size(); i++) {
-            logger.info("Order: " + oList.get(i)); // Replaced System.out with logger
+            logger.info(String.format("Order: %s", oList.get(i))); // Using String.format for formatting
         }
     }
 
